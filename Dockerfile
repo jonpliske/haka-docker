@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     vim \
-    screen \
+    tmux \
     tcpdump \
     rsync
 
@@ -32,6 +32,8 @@ RUN dpkg -i \
     haka-nfqueue_0.3.0_amd64.deb
 
 
-WORKDIR /usr/share/haka/sample/gettingstarted
-CMD ["haka", "-d", "-c", "gettingstarted.conf", "--no-daemon"]
+WORKDIR /usr/share/haka/sample
+
+CMD bash
+# CMD ["haka", "-d", "-c", "gettingstarted.conf", "--no-daemon"]
 
